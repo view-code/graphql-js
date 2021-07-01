@@ -89,8 +89,10 @@ function buildPackageJSON() {
 
   const { preReleaseTag } = versionMatch.groups;
 
+
   if (preReleaseTag != null) {
     const splittedTag = preReleaseTag.split('.');
+
     // Note: `experimental-*` take precedence over `alpha`, `beta` or `rc`.
     const publishTag = splittedTag[2] ?? splittedTag[0];
     assert(
