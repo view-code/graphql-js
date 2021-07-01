@@ -55,3 +55,5 @@ export class Source {
 export function isSource(source: unknown): source is Source {
   return instanceOf(source, Source);
 }
+
+// done
